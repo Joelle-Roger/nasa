@@ -32,13 +32,16 @@ export async function picture() {
                 apodTitle.className='container__apod-title'
                 apodTitle.textContent= data.title;
                 apodContainer.appendChild(apodTitle);
+
+                const apodContent = document.createElement('div');
+                apodContent.className = 'container__apod-content'
     
                 const apodImage = document.createElement('img');
                 apodImage.src = data.url;
                 apodImage.alt = "Astronomy Picture of the Day";
                 apodImage.style.width='50%';
                 apodImage.style.padding='10px 10px'
-                apodContainer.appendChild(apodImage);
+                
     
                 const apodExp = document.createElement('p')
                 apodExp.className='container__apod-text'
@@ -46,7 +49,12 @@ export async function picture() {
                 const maxLength = 100;
                 const truncate = fullText.length > maxLength ? `${fullText.substring(0,maxLength)}<br><span class="container__apod-seeMore">See More</span>` : fullText
                 apodExp.innerHTML=`<strong>Explanation:</strong> ${truncate}`
-                apodContainer.appendChild(apodExp)
+                
+                apodContent.appendChild(apodImage);
+                apodContent.appendChild(apodExp);
+
+                apodContainer.appendChild(apodContent);
+
     
                 if(fullText.length > maxLength){
                     const seeMore = document.querySelector('.container__apod-seeMore')
@@ -55,7 +63,6 @@ export async function picture() {
                         apodExp.innerHTML=`<strong>Explanation:</strong> ${fullText}`
                     })
                 }
-                apodContainer.appendChild(apodExp)
             }
     
         
