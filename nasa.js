@@ -3,19 +3,24 @@ export async function picture() {
     const date = dateInput.value
     const apiKey = 'sIMOUEOoP9yumtkTILAgKlH73Q8eua3ZojZOX64K'
     const firstDate = new Date('1995-06-16')
+    const message = document.createElement('p')
+    message.textContent=''
+
+    const inputDate = new Date(date);
+    
+    if (inputDate < firstDate) {
+        message.textContent = "Error: The selected date is before the first available date (June 16, 1995).";
+        message.style.color = 'red';
+        apodContainer.appendChild(message);
+        return;
+    }
     try{
         const url = `https://api.nasa.gov/planetary/apod?api_key=${apiKey}${date?`&date=${date}`: ''}`
         const response = await fetch(url)
-        const message = document.createElement('p')
-        if(date < firstDate){
-            message.textContent="Error: The selected date is before the first available date (June 16, 1995)."
-            message.style.display='block'
-            message.style.color='red'
-        }else{
-            message.textContent=''
+        
             if(!response.ok){
-                console.log('could not fetch')
-                return 
+               console.log('could not fetch')
+                return;
             }
             const data = await response.json()
             console.log(data)
@@ -52,7 +57,7 @@ export async function picture() {
                 apodContainer.appendChild(apodExp)
             }
     
-        }
+        
         }catch(error){
             console.error(error)
         }
