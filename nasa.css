@@ -5,6 +5,11 @@
   text-align: center;
 }
 
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .container__title {
   display: flex;
   justify-content: center;
