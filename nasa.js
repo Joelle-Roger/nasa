@@ -44,12 +44,12 @@ export async function picture() {
                 apodExp.className='container__apod-text'
                 const fullText = data.explanation
                 const maxLength = 100;
-                const truncate = fullText.length > maxLength ? `${fullText.substring(0,maxLength)}<br><span id="see-more">See More</span>` : fullText
+                const truncate = fullText.length > maxLength ? `${fullText.substring(0,maxLength)}<br><span class="container__apod-seeMore">See More</span>` : fullText
                 apodExp.innerHTML=`<strong>Explanation:</strong> ${truncate}`
                 apodContainer.appendChild(apodExp)
     
                 if(fullText.length > maxLength){
-                    const seeMore = document.getElementById('see-more')
+                    const seeMore = document.querySelector('.container__apod-seeMore')
                     seeMore.addEventListener('click',(e)=>{
                         e.preventDefault()
                         apodExp.innerHTML=`<strong>Explanation:</strong> ${fullText}`

@@ -56,12 +56,10 @@ body {
   padding: 50px 20px;
   width: 250px;
 }
-
-#see-more {
+.container__apod-seeMore {
   text-decoration: underline;
 }
-
-#see-more:hover {
+.container__apod-seeMore:hover {
   cursor: pointer;
   color: #acadd3;
 }/*# sourceMappingURL=nasa.css.map */

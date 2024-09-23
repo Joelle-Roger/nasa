@@ -56,12 +56,11 @@ body{
         padding:50px 20px;
         width:250px;
     }
-}
-
-#see-more{
-    text-decoration: underline;
-}
-#see-more:hover{
-    cursor:pointer;
-    color:#acadd3;
+    &__apod-seeMore{
+        text-decoration: underline;
+    }
+    &__apod-seeMore:hover{
+        cursor:pointer;
+        color:#acadd3;
+    }
 }
