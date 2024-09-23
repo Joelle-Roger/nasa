@@ -1,9 +1,10 @@
 export async function picture() {
     const dateInput = document.getElementById('date-input')
     const date = dateInput.value
+    const apiKey = sIMOUEOoP9yumtkTILAgKlH73Q8eua3ZojZOX64K
     try{
         
-        const response = await fetch(`https://api.nasa.gov/planetary/apod?api_key=sIMOUEOoP9yumtkTILAgKlH73Q8eua3ZojZOX64K${date?`&date=${date}`: ''}`)
+        const response = await fetch(`https://api.nasa.gov/planetary/apod?api_key=${apiKey}${date?`&date=${date}`: ''}`)
         if(!response.ok){
             console.log('could not fetch')
             return
