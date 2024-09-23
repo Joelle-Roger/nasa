@@ -31,9 +31,10 @@ body {
   border-radius: 8px;
 }
 .container__button:focus {
-  border: 1px solid #0B3D91;
+  border:none;
   border-radius: 8px;
-  color: #FC3D21;
+  color:#fff;
+  background-color:#0B3D91 ;
 }
 .container__apod-title {
   color: #fff;
