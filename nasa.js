@@ -3,7 +3,7 @@ export async function picture() {
     const date = dateInput.value
     const apiKey = 'sIMOUEOoP9yumtkTILAgKlH73Q8eua3ZojZOX64K'
     const firstDate = new Date('1995-06-16')
-    const message = document.createElement('p')
+    const message = document.createElement('div')
     const apodContainer = document.querySelector('.container__apod')
     apodContainer.innerHTML='';
     message.textContent=''
