@@ -1,5 +1,5 @@
 export async function picture() {
-    const dateInput = document.getElementById('date-input')
+    const dateInput = document.querySelector('.container__input')
     const date = dateInput.value
     const apiKey = 'sIMOUEOoP9yumtkTILAgKlH73Q8eua3ZojZOX64K'
     try{
