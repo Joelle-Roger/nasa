@@ -33,8 +33,7 @@
 .container__apod-title {
   color: rgb(184, 11, 11);
 }
-
-p {
+.container__apod-text {
   margin: 0 auto;
   border: 1px solid rgb(0, 0, 128);
   border-radius: 10px;

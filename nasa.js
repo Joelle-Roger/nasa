@@ -26,6 +26,7 @@ export async function picture() {
             apodContainer.appendChild(apodImage);
 
             const apodExp = document.createElement('p')
+            apodExp.className='container__apod-text'
             const fullText = data.explanation
             const maxLength = 100;
             const truncate = fullText.length > maxLength ? `${fullText.substring(0,maxLength)}<br><span id="see-more">See More</span>` : fullText
