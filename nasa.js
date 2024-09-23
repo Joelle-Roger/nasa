@@ -7,6 +7,7 @@ export async function picture() {
         const response = await fetch(`https://api.nasa.gov/planetary/apod?api_key=${apiKey}${date?`&date=${date}`: ''}`)
         if(!response.ok){
             console.log('could not fetch')
+            console.log(error)
             return
         }
         const data = await response.json()
