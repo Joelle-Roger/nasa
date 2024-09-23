@@ -9,6 +9,7 @@ export async function picture() {
     message.textContent=''
 
     const inputDate = new Date(date);
+    message.className='container__apod-error'
     
     if (inputDate < firstDate) {
         message.textContent = "Error: The selected date is before the first available date (June 16, 1995).";

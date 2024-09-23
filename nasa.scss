@@ -43,6 +43,11 @@
         width:400px;
         color:rgb(0, 0, 128);
     }
+    &__apod-error{
+        border:none;
+        border-radius: 8px;
+        background-color: rgb(0, 0, 128);
+    }
 }
 
 #see-more{
