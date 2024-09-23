@@ -30,11 +30,6 @@
   border-radius: 8px;
   color: rgb(184, 11, 11);
 }
-.container__apod {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 .container__apod-title {
   color: rgb(184, 11, 11);
 }
@@ -51,10 +46,7 @@
   border: none;
   border-radius: 8px;
   background-color: rgb(189, 189, 209);
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  margin: 20px auto;
   padding: 10px 10px;
   width: 250px;
 }
