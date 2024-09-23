@@ -46,9 +46,10 @@
     &__apod-error{
         border:none;
         border-radius: 8px;
-        background-color: rgb(189, 189, 209);
-        margin:20px auto;
-        padding:10px 10px;
+        background-color: rgb(238, 238, 239);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        margin:50px auto;
+        padding:50px 20px;
         width:250px;
     }
 }

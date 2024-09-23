@@ -12,7 +12,7 @@ export async function picture() {
     message.className='container__apod-error'
     
     if (inputDate < firstDate) {
-        message.textContent = "Error: The selected date is before the first available date (June 16, 1995).";
+        message.textContent = `Error:The selected date is before the first available date (June 16, 1995).`
         message.style.color = 'red';
         apodContainer.appendChild(message);
         return;
