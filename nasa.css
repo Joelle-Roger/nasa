@@ -5,11 +5,6 @@
   text-align: center;
 }
 
-.container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 .container__title {
   display: flex;
   justify-content: center;
@@ -34,6 +29,11 @@
   border: 1px solid rgb(0, 0, 128);
   border-radius: 8px;
   color: rgb(184, 11, 11);
+}
+.container__apod {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .container__apod-title {
   color: rgb(184, 11, 11);
