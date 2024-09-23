@@ -23,6 +23,7 @@ export async function picture() {
             apodImage.src = data.url;
             apodImage.alt = "Astronomy Picture of the Day";
             apodImage.style.width='50%';
+            apodImage.style.padding='5px 5px'
             apodContainer.appendChild(apodImage);
 
             const apodExp = document.createElement('p')
