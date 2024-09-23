@@ -1,3 +1,6 @@
+body{
+    background:#B2C3DCff;
+}
 #app {
     max-width: 1280px;
     margin: 0 auto;
@@ -14,29 +17,30 @@
     &__input{
         text-transform: uppercase;
         font-size:15px;
-        color:rgb(0, 0, 128);
+        text-align: center;
+        color:#0B3D91;
     }
     &__button{
         border:none;
         border-radius: 8px;
-        color:rgb(0, 0, 128) ;
+        color:#0B3D91;
         padding:10px 10px;
     }
     &__button:hover{
-        border:1px solid rgb(0, 0, 128);
+        border:1px solid #0B3D91;
         border-radius: 8px;
     }
     &__button:focus{
-        border:1px solid rgb(0, 0, 128);
+        border:1px solid #0B3D91;
         border-radius: 8px;
-        color:rgb(184, 11, 11);
+        color:#FC3D21;
     }
     &__apod-title{
-        color:rgb(184, 11, 11);
+        color:#FC3D21;
     }
     &__apod-text{
         margin:0 auto;
-        border:1px solid rgb(0, 0, 128);
+        border:1px solid #0B3D91;
         border-radius: 10px;
         background-color: rgb(250, 250, 250);
         padding:15px 15px;
