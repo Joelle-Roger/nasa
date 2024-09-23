@@ -12,10 +12,10 @@ export async function picture() {
         const data = await response.json()
         console.log(data)
         if(data){
-            const apodContainer = document.getElementById('apod-container')
+            const apodContainer = document.querySelector('.container__apod')
             apodContainer.innerHTML='';
             const apodTitle = document.createElement('h3')
-            apodTitle.id='apod-title'
+            apodTitle.className='container__apod-title'
             apodTitle.textContent= data.title;
             apodContainer.appendChild(apodTitle);
 
