@@ -43,11 +43,11 @@
   color: rgb(0, 0, 128);
 }
 
-span {
+#see-more {
   text-decoration: underline;
 }
 
-span:hover {
+#see-more:hover {
   cursor: pointer;
   color: #00014d;
 }/*# sourceMappingURL=nasa.css.map */
