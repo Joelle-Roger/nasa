@@ -4,6 +4,8 @@ export async function picture() {
     const apiKey = 'sIMOUEOoP9yumtkTILAgKlH73Q8eua3ZojZOX64K'
     const firstDate = new Date('1995-06-16')
     const message = document.createElement('p')
+    const apodContainer = document.querySelector('.container__apod')
+    apodContainer.innerHTML='';
     message.textContent=''
 
     const inputDate = new Date(date);
@@ -25,8 +27,6 @@ export async function picture() {
             const data = await response.json()
             console.log(data)
             if(data){
-                const apodContainer = document.querySelector('.container__apod')
-                apodContainer.innerHTML='';
                 const apodTitle = document.createElement('h3')
                 apodTitle.className='container__apod-title'
                 apodTitle.textContent= data.title;
