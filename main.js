@@ -1,9 +1,6 @@
 import "./nasa.css";
 import {picture } from "./nasa.js"
 
-document.querySelector('#home').innerHTML=`<h1>Welcome to the NASA API App!</h1>
-        <p>Explore the Astronomy Picture of the Day and learn about amazing space content.</p>
-        <a href="index.html" class="button">Start Exploring</a>`
 
 document.querySelector("#app").innerHTML = `
   <div class="container">
