@@ -1,31 +1,37 @@
 body{
-    background-image: url('https://img.freepik.com/free-vector/gradient-abstract-background-with-different-shapes_23-2149110297.jpg?t=st=1727096236~exp=1727099836~hmac=da8f71def831615055202361dae0797e921b53a94f635b0e2bb8762f0fceffeb&w=1060')
-    width=100%; 
-    background-position: center;
-    background-repeat: no-repeat;
-
+    background-image: url('https://img.freepik.com/free-vector/gradient-abstract-background-with-different-shapes_23-2149110297.jpg?t=st=1727096236~exp=1727099836~hmac=da8f71def831615055202361dae0797e921b53a94f635b0e2bb8762f0fceffeb&w=1060');
+    width: 100%;
 }
 
 
 #app {
     max-width: 1280px;
-    padding: 50px 10px;
-    display: flex;
-    align-items: flex-end;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
   }
 
 .container{
     &__title{
-        display: flex;
-        justify-content: center;
-        color:#fff;
-        font-size: 50px;
+        padding:20px 20px;
+        color: #fff;
+        font-size: 30px;
+    }
+    &__text{
+        margin:0 auto;
+        padding:20px 20px;
+        color: #fff;
+        font-size: 20px;
     }
     &__input{
         text-transform: uppercase;
         font-size:15px;
         text-align: center;
-        color:#0B3D91;
+        color:#fff;
+        background: none;
+        border:1px solid #fff;
+        border-radius: 4px;
+        padding:5px 5px;
     }
     &__button{
         border:none;
