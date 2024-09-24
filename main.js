@@ -1,6 +1,8 @@
 import "./nasa.css";
 import {picture } from "./nasa.js"
 
+document.querySelector('#home')
+
 document.querySelector("#app").innerHTML = `
   <div class="container">
   <div class="container__header">
