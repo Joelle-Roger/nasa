@@ -5,4 +5,4 @@ export function loadHomePage() {
         <a href="index.html" class="button">Start Exploring</a>
     `;
 }
-
+loadHomePage()
