@@ -2,7 +2,7 @@ import "./nasa.css";
 import { picture } from "./nasa.js";
 import { loadHomePage } from "./home.js";
 
-const isHomePage = window.location.pathname.endsWith("home.html");
+const isHomePage = window.location.pathname.endsWith("nasa.html");
 
 if (isHomePage) {
     loadHomePage();
