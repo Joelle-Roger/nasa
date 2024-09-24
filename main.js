@@ -2,13 +2,15 @@ import "./nasa.css";
 import { picture } from "./nasa.js";
 import { loadHomePage } from "./home.js";
 
-const isHomePage = window.location.pathname.endsWith("nasa.html");
+const isHomePage = window.location.pathname.endsWith("/");
+
+console.log(window.location.pathname,isHomePage)
 
 if (isHomePage) {
     loadHomePage();
 }
 else{
-  document.querySelector("#app").innerHTML = `
+  document.querySelector("#home").innerHTML = `
     <div class="container">
     <div class="container__header">
         <h1 class="container__title"> Astronomy Picture of the Day</h1>
@@ -18,7 +20,7 @@ else{
       </div>
       <div id="apod-container" class="container__apod"></div>
     </div>
-  `;
+  `
   const pictureBtn = document.getElementById('picture-btn')
   pictureBtn.addEventListener('click',async()=>{
     await picture()
