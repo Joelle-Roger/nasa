@@ -12,7 +12,7 @@ export async function picture() {
     message.className='container__apod-error'
     
     if (inputDate < firstDate) {
-        message.textContent = `Error:The selected date is before the first available date (June 16, 1995).`
+        message.textContent = `The selected date is before the first available date (June 16, 1995).`
         message.style.color = 'red';
         apodContainer.appendChild(message);
         return;
@@ -39,7 +39,7 @@ export async function picture() {
                 const apodImage = document.createElement('img');
                 apodImage.src = data.url;
                 apodImage.alt = "Astronomy Picture of the Day";
-                apodImage.style.width='70%';
+                apodImage.style.width='100%';
                 apodImage.className='container__apod-picture'
                 
     
