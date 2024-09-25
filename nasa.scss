@@ -1,7 +1,10 @@
 body{
   background-image: url('https://img.freepik.com/free-photo/colorful-abstract-nebula-space-background_53876-111355.jpg?t=st=1727185033~exp=1727188633~hmac=6ca3b12da315ccbaafc558d4c2f400dd8bcc3bb4bab32792243da7a4d30231f6&w=1060');
   background-repeat: no-repeat;
-  background-size: cover;                   
+  background-size: cover;  
+  width: 100%;
+  overflow-x: hidden;
+                 
 }
 #home {
   max-width: 1280px;
@@ -9,6 +12,7 @@ body{
   margin:0 auto;
 }
 .container{
+ 
   &__title{
       margin:0 auto;
       padding:10px 20px;
@@ -77,15 +81,25 @@ body{
       }
   }
   &__apod{
+
       &-title{
           color:#fff;
       }
       &-text{
           color:#ececec;
-          margin-bottom:20px;
           opacity: 0;
-          transform: translateY(50%);
+          transform: translateY(480px);
           transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+          width:300px;
+          position: absolute;
+          margin-left: 10px;
+          text-align: left;
+          
+          &-strong{
+            text-decoration: underline;
+            font-size:15px ;
+            letter-spacing: 2px;
+          }
       }
       &-error{
           border:none;
@@ -101,26 +115,38 @@ body{
               cursor:pointer;
               color:#acadd3;
           }
-      }
-      &-picture{
-        width: 100%;
-        transition: transform 0.5s ease-in-out;
-      }
+        }
       &-content{
-       position: relative;
+      position: relative;
+      width:30rem;
+      height:30rem;
+      margin:auto;
+      background-position: top;
+      background-size: cover;
+      background-repeat: no-repeat;
+      &-shadow{
+        position: absolute;
+        width:30rem;
+        height:30rem;
+        margin:0;
+        background-color: rgba(0, 0, 0, 0.3);
+        z-index: -1;
+       }
+      
       &:hover {
         .container__apod-text {
           opacity: 1;
-          transform: translateY(0);
+          transform: translateY(190px);
+          z-index: 2;
+        }
+        .container__apod-content-shadow{
+          z-index: 1;
         }
       }
       &:hover {
         transform: scale(1.05);
         transition: transform 0.5s ease-in-out;
       }
-  }
-  &-picture {
-    transform: scale(0.8);
   }
 }
 }

@@ -26,25 +26,27 @@ export async function picture() {
             console.log(data)
             if(data){
                 const apodTitle = document.createElement('h3')
-                apodTitle.className='container__apod-title'
+                apodTitle.className = 'container__apod-title';
                 apodTitle.textContent= data.title;
                 apodContainer.appendChild(apodTitle);
 
                 const apodContent = document.createElement('div');
-                apodContent.className = 'container__apod-content'
+                apodContent.className = 'container__apod-content';
+                apodContent.style.backgroundImage= `url(${data.url})`;
 
-                const apodImage = document.createElement('img');
-                apodImage.src = data.url;
-                apodImage.alt = "Astronomy Picture of the Day";
-                apodImage.className='container__apod-picture'
+
+                const shadow = document.createElement('div')
+                shadow.className='container__apod-content-shadow';
+
+                apodContent.appendChild(shadow)  
 
                 const start=0;
                 const end=500;
                 const apodExp = document.createElement('p')
                 apodExp.className = 'container__apod-text'
                 const fullText = data.explanation.substring(start,end);
-                apodExp.innerHTML = `<strong>Explanation:</strong> ${fullText}`
-                apodContent.appendChild(apodImage)
+                apodExp.innerHTML = `<strong class="container__apod-text-strong">EXPLANATION:</strong> ${fullText}`
+               
                 apodContent.appendChild(apodExp)
                 apodContainer.appendChild(apodContent)
             }

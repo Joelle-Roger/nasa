@@ -18,7 +18,10 @@ else{
       <input type="date" id="date-input" class="container__input">
       <button id="picture-btn" class="container__button">Display Picture</button>
       </div>
-      <div id="apod-container" class="container__apod"></div>
+      <div id="apod-container" class="container__apod">
+      </div>
+      
+      </div>
     </div>
   `
   const pictureBtn = document.getElementById('picture-btn')
